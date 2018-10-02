@@ -29,7 +29,7 @@
  * </code>
  *
  */
-define('SIMPLEID_BASE_URL', 'https://openid.dmlb2000.org');
+define('SIMPLEID_BASE_URL', 'https://id.fouin.org');
 
 /**
  * Allow clean URLs.

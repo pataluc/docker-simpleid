@@ -19,7 +19,7 @@
 # DEALINGS IN THE SOFTWARE.
 
 FROM php:5.6-apache
-MAINTAINER David Brown <dmlb2000@gmail.com>
+LABEL maintener="David Brown <dmlb2000@gmail.com>, Luc Fouin <luc.fouin@gmail.com>"
 
 RUN apt-get update && \
     apt-get -y install ssl-cert libgmp-dev && \
@@ -38,7 +38,7 @@ RUN apt-get update && \
 
 # install simpleid server
 RUN mkdir -p /data/logs
-RUN curl -L http://downloads.sourceforge.net/simpleid/simpleid-1.0.0.tar.gz | tar -C /data -xzf - && rm -rf /var/www/html/ && ln -s /data/simpleid/www /var/www/html
+RUN curl -L http://downloads.sourceforge.net/simpleid/simpleid-1.0.2.tar.gz | tar -C /data -xzf - && rm -rf /var/www/html/ && ln -s /data/simpleid/www /var/www/html
 RUN chown www-data.www-data /data/logs /data/simpleid/store /data/simpleid/cache
 
 EXPOSE 443
